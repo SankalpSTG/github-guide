@@ -64,3 +64,4 @@ git revert HEAD
 ```
 Testing Soft Commit
 Testing Soft Commit
+Testing Soft Commit
