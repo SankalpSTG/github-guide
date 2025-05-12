@@ -62,6 +62,20 @@ Previously we tried resetting the file locally. Now we will revert the commit it
 ```
 git revert HEAD
 ```
-This should revert the commit but keep the changes staged. That means your changes aren't lost locally but on the server. You can still push to server.
+This should revert the commit and your changes are gone. This will keep the history clean as well.
 
-Now to revert but 
+Now to revert but keep your changes staged you can use the soft reset command
+```
+git reset --soft HEAD~1
+```
+This should reset your last commit but keep the changes staged (git add stages the changes)
+
+To revert the changes as well as unstage them use the mixed flag instead of soft
+```
+git reset --mixed HEAD~1
+```
+
+To revert the changes as well as delete them entirely, use the hard flag instead of mixed
+```
+git reset --hard HEAD~1
+```
