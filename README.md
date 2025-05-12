@@ -56,3 +56,9 @@ git checkout -- README.md
 ```
 Try making some changes but do not commit. And then run the above command. The file will reset to it's original state.
 
+Now try to do some unnecessary changes and push the file again.
+
+Previously we tried resetting the file locally. Now we will revert the commit itself. After pushing the file, use the following command
+```
+git revert HEAD
+```
