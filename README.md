@@ -142,3 +142,8 @@ git diff
 ```
 This command will show current changes that aren't yet committed.
 
+Now, make some changes in the README.md file and then check the status of the commits using following command
+```
+git status
+```
+This will show you the changes that are staged or not staged, committed or uncommitted, everything.
