@@ -123,3 +123,16 @@ git stash pop
 
 This should restore your changes and then you can push those.
 
+Now, in the terminal type
+```
+git log
+```
+
+This should show you a log of commits that happened on your branch. to see more you can press the down arrow which will let you scroll down. To exit, press the ```q``` key.
+
+To see the logs in a better way, you can add flags like following
+```
+git log --oneline --graph --all
+```
+The ```oneline``` flag will show you each commit with message in one line. The ```graph``` flag creates a graph of branches to the left. The ```all``` flag should show all commits.
+
