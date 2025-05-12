@@ -62,3 +62,5 @@ Previously we tried resetting the file locally. Now we will revert the commit it
 ```
 git revert HEAD
 ```
+
+Preparing to reset hard
