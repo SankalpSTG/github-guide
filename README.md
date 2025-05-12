@@ -35,4 +35,11 @@ Now you will be pushing your file to github using below command
 ```
 git push -u origin main
 ```
-
+Now add some more changes to the READMD file, and commit
+```
+git commit -am "Updated READMD.md file"
+```
+Now push
+```
+git push
+```
