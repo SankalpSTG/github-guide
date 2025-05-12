@@ -56,4 +56,3 @@ git checkout -- README.md
 ```
 Try making some changes but do not commit. And then run the above command. The file will reset to it's original state.
 
-Testing this out
