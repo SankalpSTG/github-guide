@@ -136,3 +136,9 @@ git log --oneline --graph --all
 ```
 The ```oneline``` flag will show you each commit with message in one line. The ```graph``` flag creates a graph of branches to the left. The ```all``` flag should show all commits.
 
+Now, make some changes in the README.md file and then use following command:
+```
+git diff
+```
+This command will show current changes that aren't yet committed.
+
