@@ -65,5 +65,3 @@ git revert HEAD
 This should revert the commit but keep the changes staged. That means your changes aren't lost locally but on the server. You can still push to server.
 
 Now to revert but 
-
-TESTING ONE MORE TIME
