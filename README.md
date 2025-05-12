@@ -80,4 +80,46 @@ To revert the changes as well as delete them entirely, use the hard flag instead
 git reset --hard HEAD~1
 ```
 
-Testing
+Now let's create a branch. To create a branch, use the checkout command.
+```
+git checkout -b feature/readme
+```
+```feature/readme``` is your branch name
+
+Now make some changes and commit
+```
+git commit -am "Updated feature/readme"
+```
+
+Now go to main branch
+```
+git checkout main
+```
+Now merge ```feature/readme``` into main using following command
+```
+git merge feature/readme
+```
+Once done, basically you have merged your branch locally. Now you can do git push to push the changes
+```
+git push
+```
+
+Then let's delete the branch
+```
+git branch -d feature/readme
+```
+This will delete the branch.
+
+Now make some changes in your readme file and then we will stash it using below command
+```
+git stash
+```
+Stashing saves your changes without commiting them. You can restore it later. You use this command if you wish to switch between branches without commiting or any other case.
+
+Now to restore the stash, use the below command
+```
+git stash pop
+```
+
+This should restore your changes and then you can push those.
+
