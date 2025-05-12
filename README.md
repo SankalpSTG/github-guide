@@ -43,3 +43,16 @@ Now push
 ```
 git push
 ```
+Now, go to github.com and edit your READMD.md and make some changes. Then come back to terminal, and type
+```
+git pull
+```
+
+This should pull the changes you made directly in github wehsite.
+
+If you are working on this file and you haven't made any commits but you wish to restore this file back to as it was, you can use the following command.
+```
+git checkout -- README.md
+```
+Try making some changes but do not commit. And then run the above command. The file will reset to it's original state.
+
