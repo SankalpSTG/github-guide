@@ -2,6 +2,9 @@
 
 Learn with me...
 
+## If You Have Git Configured
+or you have github desktop installed and you have pushed / pulled something to github atleast once.
+
 Create an empty folder and open terminal in that folder and type
 
 ```
@@ -147,3 +150,22 @@ Now, make some changes in the README.md file and then check the status of the co
 git status
 ```
 This will show you the changes that are staged or not staged, committed or uncommitted, everything.
+
+
+That's all.
+
+## If You Don't Have Git Configured
+
+Download git for windows [here](https://git-scm.com/downloads/win) 
+
+Download git for mac [here](https://git-scm.com/downloads/mac) 
+
+Download git for other platforms [here](https://git-scm.com/downloads/linux) 
+
+
+Use the below commands to configure your infomration for all repositories
+```
+git config --global user.name "<full name>"
+git config --global user.email "<email>"
+```
+
