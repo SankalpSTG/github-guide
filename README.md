@@ -152,6 +152,8 @@ git status
 This will show you the changes that are staged or not staged, committed or uncommitted, everything.
 
 
+Branch 1 Changes
+
 That's all.
 
 ## If You Don't Have Git Configured
