@@ -151,8 +151,18 @@ git status
 ```
 This will show you the changes that are staged or not staged, committed or uncommitted, everything.
 
+Now let's talk about rebasing. 
 
-Branch 1 Changes
+Imagine you are working on branch1. someone merged some changes in main branch. You need those changes in branch1. So you merge main into branch1.
+
+Now, if this happens multiple times, you will have multiple merges in your branch1.
+
+If you finally merge branch1 into main, the main branch history will show multiple merges from main to branch1.
+
+![image](/assets/image1.png)
+
+For a cleaner approach, instead we can rebase. Rebasing in simpler words is instead of merging you simply put
+
 
 That's all.
 
