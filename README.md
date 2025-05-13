@@ -165,6 +165,7 @@ For a cleaner approach, instead we can rebase. Rebasing in simpler words is inst
 
 Branch Commit 1
 Branch Commit 2
+Branch Commit 3
 
 That's all.
 
