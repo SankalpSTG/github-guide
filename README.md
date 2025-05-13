@@ -163,7 +163,7 @@ If you finally merge branch1 into main, the main branch history will show multip
 
 For a cleaner approach, instead we can rebase. Rebasing in simpler words is instead of merging you simply put
 
-yx
+Branch Commit 1
 
 That's all.
 
