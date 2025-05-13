@@ -2,6 +2,8 @@
 
 Learn with me...
 
+This is a tutorial for git commands. This should give you a basic idea of each git command specifically for interview preparation.
+
 This tutorial assumes that you already have git installed and configured.
 
 ### Basics
@@ -311,6 +313,23 @@ git log --oneline --graph
 ```
 Observe the graph and the commits, those will look cleaner than the merge.
 
-To see how merge commits would look, all you need to do is write ```git merge main``` instead of ```git rebase main```.
+#### For interactive rebasing
+you can use an extra flag ```-i``` like below
+```
+git rebase main -i
+```
+This will open up an editor with instructions allowing you to make changes allowing you to squash or pick commits. Squashing is combining multiple commits into one.
+
+### Alias
+
+You can create alias for commands to make them shorter
+```
+git config --global alias.st status
+```
+So next time, you will be calling status command using
+```
+git st
+```
+
 
 That's all.
