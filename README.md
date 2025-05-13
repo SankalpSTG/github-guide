@@ -2,9 +2,9 @@
 
 Learn with me...
 
-## If You Have Git Configured
-or you have github desktop installed and you have pushed / pulled something to github atleast once.
+This tutorial assumes that you already have git installed and configured.
 
+### Basics
 Create an empty folder and open terminal in that folder and type
 
 ```
@@ -53,6 +53,7 @@ git pull
 
 This should pull the changes you made directly in github wehsite.
 
+### Resetting Unstaged Commits
 If you are working on this file and you haven't made any commits but you wish to restore this file back to as it was, you can use the following command.
 ```
 git checkout -- README.md
@@ -61,6 +62,7 @@ Try making some changes but do not commit. And then run the above command. The f
 
 Now try to do some unnecessary changes and push the file again.
 
+### Reverting Pushed Commits
 Previously we tried resetting the file locally. Now we will revert the commit itself. After pushing the file, use the following command
 ```
 git revert HEAD
@@ -113,6 +115,8 @@ git branch -d feature/readme
 ```
 This will delete the branch.
 
+### Stashing
+
 Now make some changes in your readme file and then we will stash it using below command
 ```
 git stash
@@ -126,6 +130,7 @@ git stash pop
 
 This should restore your changes and then you can push those.
 
+### Logging
 Now, in the terminal type
 ```
 git log
@@ -151,7 +156,7 @@ git status
 ```
 This will show you the changes that are staged or not staged, committed or uncommitted, everything.
 
-Now let's talk about rebasing. 
+### Now let's talk about rebasing. 
 
 Imagine you are working on branch1. someone merged some changes in main branch. You need those changes in branch1. So you merge main into branch1.
 
@@ -159,28 +164,153 @@ Now, if this happens multiple times, you will have multiple merges in your branc
 
 If you finally merge branch1 into main, the main branch history will show multiple merges from main to branch1.
 
-![image](/assets/image1.png)
+![image](/assets/imge1.png)
 
-For a cleaner approach, instead we can rebase. Rebasing in simpler words is instead of merging you simply put
+The above looks messier and harder to read.
 
+For a cleaner approach, instead we can rebase. Rebasing in simpler words is instead of merging you simply copy main branch history into branch1 history and place branch1 history above the main copied history.
+![image](/assets/image2.png)
+
+The above is much cleaner to read.
+
+Let's mimic this.
+
+#### Merge Flow
+in your main branch, create a file main.txt, write something in it, and then save it and commit main branch with message 
+```
+git commit -am "Main Commit 1"
+```
+Now create another branch 
+```
+git checkout -b branch1
+```
+Create a file branch1.txt, write this in it:
+```
 Branch Commit 1
-Branch Commit 2
-Branch Commit 3
+```
+And then save it and commit branch1 with message
+```
+git commit -am "Branch Commit 1"
+```
+Then go to main branch
+```
+git checkout main
+```
+Make some changes in text1.txt and commit
+```
+git commit -am "Main Commit 2"
+```
+Now go back to branch1
+```
+git checkout branch1
+```
+To merge main -> branch1, we will write
+```
+git merge main
+```
+Then we will make some changes in branch1.txt, and then commit
+```
+git commit -am "Branch Commit 2"
+```
+Then go to main branch
+```
+git checkout main
+```
+Make some changes in text1.txt and commit
+```
+git commit -am "Main Commit 3"
+```
+Now go back to branch1
+```
+git checkout branch1
+```
+To merge main -> branch1, we will write
+```
+git merge main
+```
+Then we will make some changes in branch1.txt, and then commit
+```
+git commit -am "Branch Commit 3"
+```
+Now go to main branch and merge branch1 into main
+```
+git merge branch1
+```
+Now if you try to log the main commits using following command
+```
+git log --oneline --graph
+```
+Observe the graph and the commits, those will look cleaner than the merge.
+
+To see how merge commits would look, all you need to do is write ```git merge main``` instead of ```git rebase main```.
+
+#### Rebase Flow
+in your main branch, create a file main.txt, write something in it, and then save it and commit main branch with message 
+```
+git commit -am "Main Commit 1"
+```
+Now create another branch 
+```
+git checkout -b branch1
+```
+Create a file branch1.txt, write this in it:
+```
+Branch Commit 1
+```
+And then save it and commit branch1 with message
+```
+git commit -am "Branch Commit 1"
+```
+Then go to main branch
+```
+git checkout main
+```
+Make some changes in text1.txt and commit
+```
+git commit -am "Main Commit 2"
+```
+Now go back to branch1
+```
+git checkout branch1
+```
+To rebase main -> branch1, we will write
+```
+git rebase main
+```
+Then we will make some changes in branch1.txt, and then commit
+```
+git commit -am "Branch Commit 2"
+```
+Then go to main branch
+```
+git checkout main
+```
+Make some changes in text1.txt and commit
+```
+git commit -am "Main Commit 3"
+```
+Now go back to branch1
+```
+git checkout branch1
+```
+To rebase main -> branch1, we will write
+```
+git rebase main
+```
+Then we will make some changes in branch1.txt, and then commit
+```
+git commit -am "Branch Commit 3"
+```
+Now go to main branch and merge branch1 into main
+```
+git merge branch1
+```
+Now if you try to log the main commits using following command
+```
+git log --oneline --graph
+```
+Observe the graph and the commits, those will look cleaner than the merge.
+
+To see how merge commits would look, all you need to do is write ```git merge main``` instead of ```git rebase main```.
 
 That's all.
-
-## If You Don't Have Git Configured
-
-Download git for windows [here](https://git-scm.com/downloads/win) 
-
-Download git for mac [here](https://git-scm.com/downloads/mac) 
-
-Download git for other platforms [here](https://git-scm.com/downloads/linux) 
-
-
-Use the below commands to configure your infomration for all repositories
-```
-git config --global user.name "<full name>"
-git config --global user.email "<email>"
-```
-
