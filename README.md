@@ -330,6 +330,17 @@ So next time, you will be calling status command using
 ```
 git st
 ```
+### Renaming a branch locally
+You can use the following command
+```
+git branch -m master main
+```
+In the above example, we are renaming our current branch on local i.e. master to main.
 
+### Unrelated Histories
+If you ever encountered issue regarding pulling a git branch but it gives error regarding "unrelated histories", you can use the below command to pull ignoring unrelated histories
+```
+git pull origin <branch>  --allow-unrelated-histories
+```
 
 That's all.
